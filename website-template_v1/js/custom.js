@@ -1,5 +1,3 @@
-/* Load footer & header dynamically */
-	$("footer").load("../res/footer.html");
 /* Start onevent listeners */
 	$(document).ready(function() {
 	    $(".button-collapse").sideNav();
