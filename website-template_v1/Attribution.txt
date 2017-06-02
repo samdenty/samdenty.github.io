@@ -1,0 +1,5 @@
+Footer animation:
+	https://codepen.io/mfritsch/pen/KdKoKQ
+
+Material design base theme:
+	Materilize
