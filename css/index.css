@@ -248,3 +248,9 @@
     line-height: initial;
   }
 }
+.about-sect {
+  clear: both;
+  position: absolute;
+  margin-top: 300px;
+  top: 0
+}

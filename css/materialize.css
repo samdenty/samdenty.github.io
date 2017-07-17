@@ -2776,6 +2776,21 @@ nav ul a span.badge {
 .header-5 .main-wrap .parallax-container {
     height: 350px;
 }
+.header-6 .main-wrap .parallax-container {
+    height: 400px;
+}
+.header-7 .main-wrap .parallax-container {
+    height: 450px;
+}
+.header-8 .main-wrap .parallax-container {
+    height: 500px;
+}
+.header-9 .main-wrap .parallax-container {
+    height: 550px;
+}
+.header-100 .main-wrap .parallax-container {
+    height: 100%;
+}
 main, nav {
     flex: 1 0 auto;
     width: 100%;
