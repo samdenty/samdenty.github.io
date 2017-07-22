@@ -29,18 +29,19 @@
   margin: 0 auto;
   border-radius: 10px 10px 0 0;
   padding: 9px;
-  background: rgba(24, 27, 31, 0.97);
+  background: #d68181;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1)
 }
 .comp .mid {
   float: left;
   display: block;
   height: 100%;
   position: relative;
-  background-color: #abadc6;
+  background-color: #e4a9a9;
   width: 50%
 }
 .comp .mid.codigo {
-  background-color: #22262b
+  background-color: #a54949
 }
 .comp .site {
   overflow: hidden;
@@ -67,7 +68,7 @@
   -ms-flex-pack: start;
   justify-content: flex-start;
   border-radius: 4px 4px 0 0;
-  background-color: #afa895
+  background-color: #ef8e8e
 }
 .comp .site .cerrar>div {
   display: inline-block;
@@ -174,7 +175,7 @@
   padding: 11px 0 14px 14px
 }
 .comp .codigo .atr, .comp .codigo .cont, .comp .codigo .fun, .comp .codigo .var {
-  background-color: #ac5e47;
+  background-color: #e89b9b;
   -webkit-animation: code;
   animation: code;
   -webkit-animation-duration: .3s;
@@ -183,17 +184,17 @@
   animation-iteration-count: infinite
 }
 .comp .codigo .atr, .comp .codigo .cont, .comp .codigo .fun {
-  background-color: #464748;
+  background-color: #ff4e4e;
   -webkit-animation-duration: .5s;
   animation-duration: .5s
 }
 .comp .codigo .atr, .comp .codigo .fun {
-  background-color: #fbb053;
+  background-color: #fdba68;
   -webkit-animation-duration: .2s;
   animation-duration: .2s
 }
 .comp .codigo .atr {
-  background-color: #645572;
+  background-color: #822929;
   -webkit-animation-duration: .1s;
   animation-duration: .1s
 }
@@ -228,7 +229,7 @@
 .base {
   width: 290px;
   height: 10px;
-  background: #e0e2e2;
+  background: #efb7b7;
   display: block;
   margin: 0 auto;
   border-radius: 0 0 6px 6px
@@ -253,4 +254,21 @@
   position: absolute;
   margin-top: 300px;
   top: 0
+}
+@media only screen and (max-width: 991px) {
+    .base {
+        background: #727f86 !important;
+    }
+    .monitor {
+        background: #4F5B61 !important;
+    }
+    .comp .mid.codigo {
+        background: #3d4346 !important;
+    }
+    .comp .mid {
+        background: #8b8d8e !important;
+    }
+    .comp .site .cerrar {
+        background: #d0d0d0 !important;
+    }
 }

@@ -37,4 +37,5 @@
 /* Initiate contact popup */
 	$(document).ready(function(){
 		$('.modal').modal();
+		$('.carousel').carousel();
 	});

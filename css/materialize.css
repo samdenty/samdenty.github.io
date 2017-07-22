@@ -1,3 +1,8 @@
+/* 
+theme-color: #2B363B;
+accent-color: #de5d5d;
+*/
+
 ::-webkit-scrollbar {
     width: 14px;
     background-color: #242E33
@@ -1661,11 +1666,11 @@ body {
     background: #fff;
     transform-origin: center bottom 0px;
     transform-origin: center bottom 0px;
-    transition: box-shadow .2s ease, transform 0.5s ease, margin 0.3s ease;
+    transition: box-shadow .1s linear, transform 0.5s ease, margin 0.1s linear;
     overflow: hidden;
 }
 body.tight .main-wrap {
-    transform: translateY(-83px) scale(0.8);
+    transform: translateY(-120px) scale(0.8);
     cursor: pointer;
     box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
     border-radius: 3px;
@@ -3797,7 +3802,7 @@ html {
         font-size: 14.5px;
     }
     .non-img .parallax {
-        background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(50,64,71)), to(rgb(66,83,92)));
+        background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(134, 39, 39)), to(rgb(179, 86, 86)))
     }
 }
 @media only screen and (min-width:1200px) {
@@ -7775,8 +7780,44 @@ spacer {
 }
 .tools {
     display: inline-block;
-    width: 14.2856%;
+    pointer-events:none;
+}
+.active .tools {
+    pointer-events: initial
 }
 .tools img {
     width: 100%;
+}
+.tools-container {
+    height: 300px;
+    overflow: initial;
+}
+.promo i {
+    font-size: 4.4rem;
+    color: #de5d5d;
+}
+.promo-caption {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+@media only screen and (max-width: 601px) {
+    .promo i {
+        font-size: 8rem;
+    }
+    .promo-caption {
+        font-size: 1.9rem;
+        font-weight: 500;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+    .promo {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid rgba(0,0,0,0.15)
+    }
+}
+.txt-rotate {
+    color: #ffdbdb;
 }
