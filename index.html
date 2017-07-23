@@ -25,13 +25,13 @@
                     <ul class="right hide-on-med-and-down">
                         <li><a class="waves-effect waves-light active" href="/">Home</a></li>
                         <li><a class="waves-effect waves-light" href="projects">Projects</a></li>
-                        <li><a class="waves-effect waves-light" href="collapsible.html">Javascript</a></li>
+                        <li><a class="waves-effect waves-light modal-trigger" href="#search" onclick="prepareSearch()">Search</a></li>
                         <li><a class="waves-effect waves-light" href="mobile.html">Mobile</a></li>
                     </ul>
                     <ul class="side-nav hide-on-large-only" id="mobile-demo">
                         <li><a class="waves-effect" href="/">Home</a></li>
                         <li><a class="waves-effect" href="projects">Projects</a></li>
-                        <li><a class="waves-effect" href="collapsible.html">Javascript</a></li>
+                        <li><a class="waves-effect modal-trigger" href="#search" onclick="prepareSearch()">Search</a></li>
                         <li><a class="waves-effect" href="mobile.html">Mobile</a></li>
                     </ul>
                 </div>
@@ -378,7 +378,7 @@
                 <div class="row">
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="name" type="text" class="validate" name="value1" required>
+                            <input id="name" type="text" name="value1" required>
                             <label for="name">Name</label>
                         </div>
                         <div class="input-field col s6">
@@ -399,6 +399,19 @@
                 <a onclick="$(this).closest('form').submit();setTimeout(function() {Materialize.toast('Message sent', 10000)}, 2000)" class="modal-action modal-close waves-effect waves-red btn-flat">Send</a>
             </div>
         </form>
+    </div>
+    <div id="search" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="What are you looking for?" type="text" id="searchQuery">
+                    <label for="searchQuery">Query</label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="submitSearch()">Search</a>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>

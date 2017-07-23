@@ -7,7 +7,6 @@
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400" rel="stylesheet">
     <link rel="icon" href="res/favicon.ico">
     <title>Sam Denty</title>
@@ -24,14 +23,14 @@
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a class="waves-effect waves-light active" href="/">Home</a></li>
-                        <li><a class="waves-effect waves-light" href="badges.html">Components</a></li>
-                        <li><a class="waves-effect waves-light" href="collapsible.html">Javascript</a></li>
+                        <li><a class="waves-effect waves-light" href="projects">Projects</a></li>
+                        <li><a class="waves-effect waves-light modal-trigger" href="#search" onclick="prepareSearch()">Search</a></li>
                         <li><a class="waves-effect waves-light" href="mobile.html">Mobile</a></li>
                     </ul>
                     <ul class="side-nav hide-on-large-only" id="mobile-demo">
                         <li><a class="waves-effect" href="/">Home</a></li>
-                        <li><a class="waves-effect" href="badges.html">Components</a></li>
-                        <li><a class="waves-effect" href="collapsible.html">Javascript</a></li>
+                        <li><a class="waves-effect" href="projects">Projects</a></li>
+                        <li><a class="waves-effect modal-trigger" href="#search" onclick="prepareSearch()">Search</a></li>
                         <li><a class="waves-effect" href="mobile.html">Mobile</a></li>
                     </ul>
                 </div>
@@ -80,8 +79,8 @@
                 document.write("<sc"+"ript type='text/javascript' src='" +
                 scJsHost+
                 "statcounter.com/counter/counter.js'></"+"script>");
-                </script>&nbsp;&nbsp;&nbsp;
-            </a>
+                </script>
+            </a>&nbsp;&nbsp;&nbsp;
             <noscript>
                 <div class="statcounter">
                     <a title="web analytics">
@@ -95,10 +94,11 @@
         <form method="get" action="https://maker.ifttt.com/trigger/contact/with/key/_fkapjdJAPj6aKKtULQ0s/" target="contactFrame">
             <div class="modal-content">
                 <h4>Contact</h4>
+                <p>Want to make an inquiry? email me at <a href="mailto:business@samdd.me" class="teal-text" target="blank_">business@samdd.me</a></p>
                 <div class="row">
                     <div class="row">
                         <div class="input-field col s6">
-                            <input id="name" type="text" class="validate" name="value1" required>
+                            <input id="name" type="text" name="value1" required>
                             <label for="name">Name</label>
                         </div>
                         <div class="input-field col s6">
@@ -108,7 +108,7 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
-                            <textarea id="message" class="materialize-textarea" name="value3" required></textarea>
+                            <textarea id="message" class="materialize-textarea" name="value3" required>Hey there,</textarea>
                             <label for="message">Message</label>
                         </div>
                     </div>
@@ -120,10 +120,22 @@
             </div>
         </form>
     </div>
+    <div id="search" class="modal">
+        <div class="modal-content">
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="What are you looking for?" type="text" id="searchQuery">
+                    <label for="searchQuery">Query</label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="submitSearch()">Search</a>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
 </body>
 
 </html>

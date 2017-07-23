@@ -36,10 +36,16 @@
                 </div>
             </nav>
         </div>
-        <div class="main-wrap">
+        <div class="main-wrap" style="background:#FAFAFA">
             <div class="content fromRight">
-                <div class="row">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente consequatur corrupti, facilis eveniet perspiciatis officia deserunt sit, quas et atque velit, omnis doloribus totam quibusdam illum excepturi. Dolores, quos, accusantium!
+                <div class="web-search-box">
+                    <input id="web-search-string">
+                    <div class="web-search-icon" onclick="webSearch()">
+                        <i class="material-icons">search</i>
+                    </div>
+                </div>
+                <div class="web-search">
+                    <iframe id="web-search"></iframe>
                 </div>
             </div>
         </div>
@@ -136,6 +142,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
 </body>
 
 </html>
