@@ -1,14 +1,7 @@
 Sitemap: https://samdd.me/sitemap.xml
 
 User-agent: *
-Disallow: /r
-Disallow: /r.html
 Disallow: /BingSiteAuth.xml
-Disallow: /google683d57bbf1604304
-Disallow: /google683d57bbf1604304.html
-Disallow: /CNAME
-Disallow: /lol
-Disallow: /lol.html
 Disallow: /fonts/
 Disallow: /css/
 Disallow: /js/
