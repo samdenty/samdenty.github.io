@@ -1,4 +1,5 @@
 {
     "Wi-PWN": "https://github.com/samdenty99/Wi-PWN",
-    "https://github.com/Wi-PWN": "https://github.com/samdenty99/Wi-PWN"
+    "https://github.com/Wi-PWN": "https://github.com/samdenty99/Wi-PWN",
+    "report-bug-wi-pwn": "mailto:wi-pwn@samdd.me?Subject=Report%20Wi-PWN%20bug&Body=Hey%20@samdenty99%2C%0AWi-PWN%20version%3D%0ADevice%3D%0ABrowser%3D%0A%0ADetails%3A%0AI%20would%20like%20to%20report%20a%20bug%20with%20the%20Wi-PWN%20firmware%2C%20%0A"
 }
