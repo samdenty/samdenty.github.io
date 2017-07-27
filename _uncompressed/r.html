@@ -1,0 +1,73 @@
+<meta name="robots" content="noindex" />
+<title>Redirecting...</title>
+<script>
+
+/*
+ * Extract the parameters from the URL
+ */
+var params = window.location.href;
+var n = params.indexOf('?');
+params = params.substring(n + 1);
+if (n == -1) params = 'https://samdenty99.github.io'; // <== If no parameters are found, then redirect to..
+
+
+function checkDatabase() {
+	/*
+	 * Check the database JSON for any overridden redirects
+	 * This allows links to be dynamically updated if they become obsolete (or create custom short-links)
+	 */
+    var xhr = new XMLHttpRequest();
+    var jsON
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+                if (IsJsonString(xhr.responseText)) {
+                    jsON = JSON.parse(xhr.responseText)
+                    var lParams = params.toLowerCase(); // Check if lowercase version of the redirect exists
+                    if (jsON[params]) {
+                        setTimeout(function() { window.location = (jsON[params]) }, 70);
+                    } else if (jsON[lParams]) {
+                        setTimeout(function() { window.location = (jsON[lParams]) }, 70);
+                    } else {
+                    	redirect()
+                    }
+                } else {
+                    redirect()
+                }
+            } else {
+                redirect()
+            }
+        }
+    }
+    xhr.open("GET", 'redirects.json', true);
+    xhr.send();
+}
+
+function IsJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
+function redirect() {
+	/*
+	 * If reading the JSON fails or if no overrides are found, then just redirect the URL normally
+	 */
+    setTimeout(function() { window.location = params }, 70);
+};
+
+/*
+ * StatCounter invisible logging, calls the checkDatabase() function after it's been loaded (or blocked by adblocker)
+ */
+var sc_project = 11396698;
+var sc_invisible = 1;
+var sc_security = "8dbb12c1";
+var scJsHost = (("https:" == document.location.protocol) ? "https://secure." : "http://www.");
+document.write("<sc" + "ript onload='checkDatabase()' onerror='checkDatabase()' src='" + scJsHost + "statcounter.com/counter/counter.js'></" + "script>");
+</script>
+<noscript>
+    <div class="statcounter"><a title="hit counter"><img class="statcounter" onload='redirect()' src="//c.statcounter.com/11396698/0/8dbb12c1/1/"></a></div>
+</noscript>
