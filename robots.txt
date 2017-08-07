@@ -2,7 +2,3 @@ Sitemap: https://samdd.me/sitemap.xml
 
 User-agent: *
 Disallow: /BingSiteAuth.xml
-Disallow: /fonts/
-Disallow: /css/
-Disallow: /js/
-Disallow: /res/
