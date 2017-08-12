@@ -9,7 +9,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400" rel="stylesheet">
     <link rel="icon" href="res/favicon.ico">
-    <title>Sam Denty</title>
+    <title>Client Work</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="#2b363b" name="theme-color">
 </head>
@@ -23,15 +23,14 @@
                     <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a class="waves-effect waves-light" href="/">Home</a></li>
-                        <li><a class="waves-effect waves-light" href="/projects">Projects</a></li>
-                        <li><a class="waves-effect waves-light" href="/work">Work</a></li>
+                        <li><a class="waves-effect" href="/projects">Projects</a></li>
+                        <li><a class="waves-effect active" href="/work">Work</a></li>
                         <li><a class="waves-effect waves-light" href="https://portal.samdd.me" target="blank_">Portal</a></li>
                         <li><a class="waves-effect waves-light modal-trigger" href="#search" onclick="prepareSearch()">Search</a></li>
                     </ul>
                     <ul class="side-nav hide-on-large-only" id="mobile-menu">
                         <li><a class="waves-effect" href="/">Home</a></li>
-                        <li><a class="waves-effect" href="/projects">Projects</a></li>
-                        <li><a class="waves-effect" href="/work">Work</a></li>
+                        <li><a class="waves-effect" href="work">Work</a></li>
                         <li><a class="waves-effect" href="https://portal.samdd.me" target="blank_">Client Portal</a></li>
                         <li><a class="waves-effect modal-trigger" href="#search" onclick="prepareSearch()">Search</a></li>
                     </ul>
@@ -41,7 +40,35 @@
         <div class="main-wrap">
             <div class="content fromRight">
                 <div class="row">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente consequatur corrupti, facilis eveniet perspiciatis officia deserunt sit, quas et atque velit, omnis doloribus totam quibusdam illum excepturi. Dolores, quos, accusantium!
+                    <div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="images/work/sancta-maria.png" class="materialboxed">
+                                <span class="card-title">Sancta Maria College</span>
+                            </div>
+                            <div class="card-content" style="min-height:120px">
+                                <p>With a new School being built, Sancta Maria College needed a modern responsive site to highlight the schools design overhaul</p>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://sanctamaria.github.io/?ref=samdd.me" class="red-text" target="blank_">Client Site</a>
+                            </div>
+                        </div>
+                    </div><div class="col s12 m6">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="images/Windows-10-SVM.png" class="materialboxed">
+                                <span class="card-title">Windows 10 SVM</span>
+                            </div>
+                            <div class="card-content" style="min-height:142px">
+                                <p>A pixel-perfect replica of Windows 10, simulated entirely in the browser with <a href="http://vanilla-js.com/" target="blank_" class="red-text text-lighten-2">Vanilla JS</a>.</p><br>
+                                <a class="github-button" href="https://github.com/samdenty99/Windows-10-SVM/subscription" data-icon="octicon-eye" data-show-count="true" aria-label="Watch samdenty99/Windows-10-SVM on GitHub" style="display:none">Watch</a>&nbsp;<a class="github-button" href="https://github.com/samdenty99/Windows-10-SVM" data-icon="octicon-star" data-show-count="true" aria-label="Star samdenty99/Windows-10-SVM on GitHub" style="display:none">Star</a>&nbsp;<a class="github-button" href="https://github.com/samdenty99/Windows-10-SVM/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork samdenty99/Windows-10-SVM on GitHub" style="display:none">Fork</a>
+                            </div>
+                            <div class="card-action">
+                                <a href="https://samdenty99.github.io/Windows-10-SVM" class="red-text" target="blank_">View Demo</a><spacer></spacer>
+                                <a href="https://github.com/samdenty99/Windows-10-SVM" class="red-text text-lighten-3" target="blank_">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -138,6 +165,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 
 </html>
