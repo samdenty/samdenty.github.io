@@ -41,7 +41,7 @@
         <div class="main-wrap">
             <div class="content fromRight">
                 <div class="row">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente consequatur corrupti, facilis eveniet perspiciatis officia deserunt sit, quas et atque velit, omnis doloribus totam quibusdam illum excepturi. Dolores, quos, accusantium!
+                    <div id="artist"></div><div id="song"></div>
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@
             </div>
             <iframe width="0" height="0" border="0" name="contactFrame" id="contactFrame"></iframe>
             <div class="modal-footer">
-                <a onclick="$(this).closest('form').submit();setTimeout(function() {Materialize.toast('Message sent', 10000)}, 2000)" class="modal-action modal-close waves-effect waves-red btn-flat">Send</a>
+                <a onclick="$(this).closest('form').submit();setTimeout(function() {Materialize.toast('Message sent', 10000)}, 2000)" class="modal-action modal-close waves-effect btn-flat">Send</a>
             </div>
         </form>
     </div>
@@ -132,12 +132,13 @@
             </div>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" onclick="submitSearch()">Search</a>
+            <a href="#!" class="modal-action modal-close waves-effect btn-flat" onclick="submitSearch()">Search</a>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/spotify.js"></script>
 </body>
 
 </html>
