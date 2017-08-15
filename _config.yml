@@ -1,0 +1,8 @@
+# Exclude some folders & files
+exclude: [_, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+
+# Gem plugins
+plugins: [jekyll-tidy]
+
+# Include Web-config files
+include: ['_web-config']

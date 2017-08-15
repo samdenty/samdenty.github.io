@@ -1,60 +1,17 @@
-<!DOCTYPE html>
-<html>
-<!-- 
-                                     .___    .___
-          ___________     _____    __| _/  __| _/
-         /  ___/\__  \   /     \  / __ |  / __ | 
-         \___ \  / __ \_|  Y Y  \/ /_/ | / /_/ | 
-        /____  >(____  /|__|_|  /\____ | \____ | 
-             \/      \/       \/      \/      \/ 
-        ________________________________________
-
-        Hello there! Welcome to samdd design!
-        This is an original template we designed
-        -    -    -    -    -    -    -    -   -
-        For more details or to arrange a meeting
-                Email: business@samdd.me
-        
-
--->
-
-<head>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400" rel="stylesheet">
-    <link rel="icon" href="res/favicon.ico">
-    <title>Sam Denty</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta content="#2b363b" name="theme-color">
-    <meta name="description" content="samdd web design" />
-    <link rel="prefetch" href="projects.html" as="html">
-</head>
+---
+layout: html
+title: Sam Denty
+head: |
+ <link type="text/css" rel="stylesheet" href="css/index.css" media="screen,projection" />
+ <link rel="prefetch" href="projects.html" as="html">
+ <meta name="description" content="samdd web design" />
+js: |
+ <script src="js/index.js"></script>
+---
 
 <body class="header-4">
     <main>
-        <div class="navbar-fixed">
-            <nav>
-                <div class="nav-wrapper">
-                    <a href="/" class="brand-logo"><img src="res/nav-logo.png"></a>
-                    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="material-icons">menu</i></a>
-                    <ul class="right hide-on-med-and-down">
-                        <li><a class="waves-effect waves-light active" href="/">Home</a></li>
-                        <li><a class="waves-effect waves-light" href="/projects">Projects</a></li>
-                        <li><a class="waves-effect waves-light" href="/work">Work</a></li>
-                        <li><a class="waves-effect waves-light" href="https://portal.samdd.me" target="blank_">Portal</a></li>
-                        <li><a class="waves-effect waves-light modal-trigger" href="#search" onclick="prepareSearch()">Search</a></li>
-                    </ul>
-                    <ul class="side-nav hide-on-large-only" id="mobile-menu">
-                        <li><a class="waves-effect" href="/">Home</a></li>
-                        <li><a class="waves-effect" href="/projects">Projects</a></li>
-                        <li><a class="waves-effect" href="/work">Work</a></li>
-                        <li><a class="waves-effect" href="https://portal.samdd.me" target="blank_">Client Portal</a></li>
-                        <li><a class="waves-effect modal-trigger" href="#search" onclick="prepareSearch()">Search</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+        {% include nav.html %}
         <div class="main-wrap">
             <div class="parallax-container non-img">
                 <div class="parallax">
@@ -92,112 +49,117 @@
                     </div>
                 </div>
                 <div class="carousel tools-container">
-                    <a class="carousel-item" href="#one!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="HTML">
                             <img src="images/tools/html.png" alt="HTML">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#one-point-five!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="PHP">
                             <img src="images/tools/php.png" alt="PHP">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#two!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="jQuery">
                             <img src="images/tools/jquery.png" alt="jQuery">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#three!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Javascript">
                             <img src="images/tools/javascript.png" alt="Javascript">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#four!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="CSS">
                             <img src="images/tools/css.png" alt="CSS">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#five!">
-                        <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="VMWare (Virtual Machines)">
-                            <img src="images/tools/vmware.png" alt="VMWare (Virtual Machines)">
-                        </div>
-                    </a>
-                    <a class="carousel-item" href="#six!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="LessCSS">
                             <img src="images/tools/lesscss.png" alt="LessCSS">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#seven!">
+                    <a class="carousel-item">
+                        <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Jekyll">
+                            <img src="images/tools/jekyll.png" alt="Jekyll">
+                        </div>
+                    </a>
+                    <a class="carousel-item">
+                        <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="VMWare (Virtual Machines)">
+                            <img src="images/tools/vmware.png" alt="VMWare (Virtual Machines)">
+                        </div>
+                    </a>
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Batch Files">
                             <img src="images/tools/batch.png" alt="Batch Files">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#eight!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Windows">
                             <img src="images/tools/windows.png" alt="Windows">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#nine!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="MS-DOS">
                             <img src="images/tools/msdos.png" alt="MS-DOS">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#ten!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Arduino">
                             <img src="images/tools/arduino.png" alt="Arduino">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#eleven!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="C++">
                             <img src="images/tools/c++.png" alt="C++">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#twelve!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="AutoHotkey">
                             <img src="images/tools/autohotkey.png" alt="AutoHotkey">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#thirteen!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Electron">
                             <img src="images/tools/electron.png" alt="Electron">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#fourteen!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="GitHub (Git)">
                             <img src="images/tools/github.png" alt="GitHub (Git)">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#fifteen!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="VNC">
                             <img src="images/tools/vnc.png" alt="VNC">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#sixteen!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Android (Xposed / ROM modification)">
                             <img src="images/tools/android.png" alt="Android">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#seventeen!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Android Studio">
                             <img src="images/tools/androidstudio.png" alt="Android Studio">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#eighteen!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Inno Setup">
                             <img src="images/tools/inno.png" alt="Inno Setup">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#nineteen!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Linux (Open Source Software & Bash)">
                             <img src="images/tools/linux.png" alt="Linux (Open Source Software & Bash)">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#twenty!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Kali Linux">
                             <img src="images/tools/kali.png" alt="Kali Linux">
                         </div>
                     </a>
-                    <a class="carousel-item" href="#twenty-one!">
+                    <a class="carousel-item">
                         <div class="tools tooltipped" data-position="bottom" data-delay="50" target="blank_" data-tooltip="Node.js">
                             <img src="images/tools/nodejs.png" alt="Node.js">
                         </div>
@@ -207,50 +169,5 @@
         </div>
         </div>
     </main>
-    <footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">About Me</h5>
-                    <p class="grey-text text-lighten-4">I am a freelancer specializing in a variety of different programming languages and platforms. </p>
-                    <button data-target="contact" class="waves-effect waves-red btn red lighten-2">Contact</button>&nbsp;&nbsp;<a class="waves-effect waves-red btn-flat red-text text-lighten-3" href="about">More info</a>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Social Media</h5>
-                    <ul>
-                        <li><a class="red-text text-lighten-3" href="https://twitter.com/sdenty_" target="blank_">Twitter</a></li>
-                        <li><a class="red-text text-lighten-3" href="https://facebook.com/samueldenty" target="blank_">Facebook</a></li>
-                        <li><a class="red-text text-lighten-3" href="https://instagram.com/samdd" target="blank_">Instagram</a></li>
-                        <li><a class="red-text text-lighten-3" href="https://snapchat.com/add/samueldenty" target="blank_">Snapchat</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                &copy;&nbsp;<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>&nbsp;<b>Samuel Denty</b>
-            </div>
-            <a class="btn-flat white-text waves-effect waves-red" href="http://statcounter.com/p11043737/summary/?guest=1">
-                <i class="material-icons left">trending_up</i>
-                <script>
-                var sc_project=11396698,
-                    sc_invisible=0,
-                    sc_security="8dbb12c1",
-                    sc_text=2;
-                </script>
-                <script src="https://secure.statcounter.com/counter/counter.js"></script>
-                <noscript>
-                    <img class="statcounter" src="https://c.statcounter.com/11396698/0/8dbb12c1/0/">
-                </noscript>
-            </a>&nbsp;&nbsp;&nbsp;
-        </div>
-    </footer>
-    <div class=modal id=contact><form action=https://maker.ifttt.com/trigger/contact/with/key/_fkapjdJAPj6aKKtULQ0s/ target=contactFrame><div class=modal-content><h4>Contact</h4><p>Want to make an inquiry? email me at <a class=teal-text href=mailto:business@samdd.me target=blank_>business@samdd.me</a><div class=row><div class=row><div class="col input-field s6"><input id=name name=value1 required><label for=name>Name</label></div><div class="col input-field s6"><input id=email name=value2 required class=validate type=email><label for=email>Email</label></div></div><div class=row><div class="col input-field s12"><textarea class=materialize-textarea id=message name=value3 required>Hey there,</textarea><label for=message>Message</label></div></div></div></div><iframe border=0 height=0 id=contactFrame name=contactFrame width=0></iframe><div class=modal-footer><a class="btn-flat modal-action modal-close waves-effect"onclick='$(this).closest("form").submit(),setTimeout(function(){Materialize.toast("Message sent",1e4)},2e3)'>Send</a></div></form></div><div class=modal id=search><div class=modal-content><div class=row><div class="col input-field s12"><input id=searchQuery placeholder="What are you looking for?"><label for=searchQuery>Query</label></div></div></div><div class=modal-footer><a class="btn-flat modal-action modal-close waves-effect"href=#! onclick=submitSearch()>Search</a></div></div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    {% include footer.html %}
 </body>
-
-</html>
