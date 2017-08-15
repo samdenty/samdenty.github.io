@@ -1,3 +1,6 @@
+---
+---
+
 /* 
 theme-color: #2B363B;
 accent-color: #de5d5d;
@@ -7497,7 +7500,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     -o-animation: fadeIn ease 0.8s;
     -ms-animation: fadeIn ease 0.8s;
     animation: fadeIn ease 0.8s;
-    .fadeAnimation
 }
 .fromTop {
     -webkit-animation: fromTop ease 1.01s;
@@ -7505,7 +7507,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     -o-animation: fromTop ease 1.01s;
     -ms-animation: fromTop ease 1.01s;
     animation: fromTop ease 1.01s;
-    .fadeAnimation
 }
 .fromBottom {
     -webkit-animation: fromBottom ease 1.01s;
@@ -7513,7 +7514,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     -o-animation: fromBottom ease 1.01s;
     -ms-animation: fromBottom ease 1.01s;
     animation: fromBottom ease 1.01s;
-    .fadeAnimation
 }
 .fromLeft {
     -webkit-animation: fromLeft ease 1.01s;
@@ -7521,7 +7521,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     -o-animation: fromLeft ease 1.01s;
     -ms-animation: fromLeft ease 1.01s;
     animation: fromLeft ease 1.01s;
-    .fadeAnimation
 }
 .fromRight {
     -webkit-animation: fromRight ease 1.01s;
@@ -7529,7 +7528,6 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     -o-animation: fromRight ease 1.01s;
     -ms-animation: fromRight ease 1.01s;
     animation: fromRight ease 1.01s;
-    .fadeAnimation
 }
 @keyframes fadeIn {
     0% {

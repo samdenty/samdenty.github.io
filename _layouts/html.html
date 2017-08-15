@@ -14,15 +14,17 @@
         -    -    -    -    -    -    -    -   -
         For more details or to arrange a meeting
                 Email: business@samdd.me
-        
 
--->
+
+  BUILD_{{site.time|date:"%s"}}
+  -->
 
 <head>
+    <link type="text/css" rel="stylesheet" href="css/materialize.css?{{site.time|date:"%s"}}" media="screen,projection" />
+    {% if page.url == "/" %}<link type="text/css" rel="stylesheet" href="css/index.css?{{site.time|date:"%s"}}" media="screen,projection" />{% endif %}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400" rel="stylesheet">
-    <link rel="icon" href="res/favicon.ico">
+    <link rel="icon" href="res/favicon.ico?{{site.time|date:"%s"}}">
     <title>{{page.title}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta content="#2b363b" name="theme-color">{% if page.head %}
