@@ -2,7 +2,7 @@
 exclude: [_*, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
 
 # Gem plugins
-plugins: [jekyll-tidy, jekyll-sitemap]
+plugins: [jekyll-tidy, jekyll-sitemap, jekyll-seo-tag]
 
 # Compress CSS
 sass:
