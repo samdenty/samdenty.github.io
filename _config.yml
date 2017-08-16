@@ -8,6 +8,5 @@ plugins: [jekyll-tidy, jekyll-sitemap, jekyll-seo-tag]
 sass:
     style: compressed
 
-
 # Set port
 port: 69
