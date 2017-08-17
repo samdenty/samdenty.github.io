@@ -2321,6 +2321,11 @@ ul.staggered-list li {
     color: rgba(255, 255, 255, 0.8);
     background-color: rgba(0, 0, 0, 0.1);
 }
+@media only screen and (max-width: 993px) {
+    .page-footer .footer-copyright .container {
+        padding-left: 25px;
+    }
+}
 table, th, td {
     border: none;
 }
@@ -3710,9 +3715,14 @@ nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.b
 nav ul a:hover {
     background-color: rgba(0, 0, 0, 0.04);
 }
-nav ul a.active {
-    box-shadow: inset 0 -2px 0 #fff;
-    color: #fff;
+nav ul a.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #fff;
 }
 nav ul.left {
     float: left;
