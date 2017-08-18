@@ -7864,3 +7864,13 @@ spacer {
 .ts {
     text-shadow: 1px 1px 9px #000
 }
+#cover {
+    display:block;
+    height:250px;
+    width:250px;
+}
+@media only screen and (max-width: 610px) {
+    #cover {
+        display: none
+    }
+}
