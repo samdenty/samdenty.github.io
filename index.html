@@ -6,7 +6,8 @@ description: Bespoke web design, online infrastructure and software solutions. C
 seo:
   links: https://github.com/samdenty99
 head: <link rel="prerender" href="https://samdd.me/projects">
-js: js/index.js
+js: /js/index.js
+js2: /js/spotify.js
 ---
 
 <body class="header-4">
@@ -164,6 +165,23 @@ js: js/index.js
                             <img src="images/tools/nodejs.png?{{site.time|date:"%s"}}" alt="Node.js">
                         </div>
                     </a>
+                </div>
+                <div class="col s12 m7">
+                    <div class="card horizontal">
+                        <div class="card-image">
+                            <img id="cover" src="/images/misc/music.png">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content">
+                                <p class="card-title">I'm currently listening to:</p>
+                                <h5 id="song"></h5>
+                                <p>by <b id="artist"></b></p>
+                            </div>
+                            <div class="card-action">
+                                <a target="blank_" id="sUrl" class="red-text">Spotify</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
