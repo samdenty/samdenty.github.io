@@ -7874,3 +7874,31 @@ spacer {
         display: none
     }
 }
+/*** Works on common browsers ***/
+::selection {
+    background-color: #DE5D5D;
+    color: #fff;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+    background-color: #DE5D5D;
+    color: #fff;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: #DE5D5D;
+    color: #fff;
+}
+
+::-ms-selection {
+    background-color: #DE5D5D;
+    color: #fff;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: #DE5D5D;
+    color: #fff;
+}
