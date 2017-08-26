@@ -1,0 +1,164 @@
+---
+title: Spotify &raquo; samdd 
+layout: basic
+---
+
+<body>
+    <main>
+        <div class="col s12 m7">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img id="cover" src="/images/misc/music.png">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <p class="card-title">I'm currently listening to:</p>
+                        <h5 id="song"></h5>
+                        <p>by <b id="artist"></b></p>
+                    </div>
+                    <div class="card-action">
+                        <a target="blank_" id="sUrl" class="red-text">Spotify</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <style>
+    body {
+        padding: 0;
+        overflow: hidden;
+    }
+
+    main:before {
+        content: "";
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        display: block;
+        background-image: url('/images/misc/music.png');
+        width: calc(100% + 100px);
+        height: calc(100% + 100px);
+
+        -webkit-filter: blur(28px);
+        -moz-filter: blur(28px);
+        -o-filter: blur(28px);
+        -ms-filter: blur(28px);
+        filter: blur(28px);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+        margin-top: -100px;
+        margin-left: -100px;
+        transform: scale(1.4);
+    }
+
+    main {
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    </style>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function getSong(callback, name) {
+    var lastfm_tracks = [];
+    // Set the request URL for Last.fm
+    var lastfm_request_url = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=' + name + '&api_key=be40e1e31ef39fd4adf7390a9a781d06&limit=1&format=json';
+
+    // Make a request to the Last.fm API
+    var request = new XMLHttpRequest();
+    request.open('GET', lastfm_request_url, true);
+
+    // Check for a successful response
+    request.onload = function() {
+        // Parse the response
+        var data = JSON.parse(request.responseText);
+        var tracks = data.recenttracks.track;
+        // Check the status of the request
+        if (request.status >= 200 && request.status < 400) {
+            if (tracks.length > 0) {
+                // Update our values
+                if (tracks[0]) {
+                    // Loop through the tracks
+                    tracks.forEach(function(el, idx, arr) {
+                        lastfm_tracks[idx] = {
+                            title: arr[idx].name,
+                            artist: arr[idx].artist['#text'],
+                            album: arr[idx].album['#text'],
+                            cover: arr[idx].image[3]['#text'],
+                            url: arr[idx].url
+                        };
+                    });
+                } else {
+                    lastfm_tracks.push({
+                        title: tracks.name,
+                        artist: tracks.artist['#text'],
+                        album: tracks.album['#text'],
+                        cover: tracks.image[3]['#text'],
+                        url: tracks.url
+                    });
+                }
+            }
+
+            // Run the callback function
+            callback(lastfm_tracks[0].artist, lastfm_tracks[0].title, lastfm_tracks[0].cover, lastfm_tracks[0].url);
+        } else {
+            // Error from the server
+            throw data.message;
+        }
+    };
+
+    // Handle any errors
+    request.onerror = function() {
+        // Connection error
+        throw 'connection error';
+    };
+
+    // Send the request
+    request.send();
+}
+
+getSong(function(artist, title, cover, sUrl) {
+    var css = document.createElement("style");
+    css.type = "text/css";
+    var main = document.getElementsByTagName('main')[0];
+    if (cover) {
+        css.innerHTML = "main:before {background-image:url("+cover+")}";
+    } else {
+        css.innerHTML = "main:before {background-image:url(/images/misc/music.png)}";
+    }
+    document.body.appendChild(css);
+    if (sUrl) $("#sUrl").attr("href", sUrl);
+    $("#artist").html(artist);
+    $("#song").html(title)
+}, "samd3n");
+
+var prevSong;
+
+setInterval(function() {
+    getSong(function(artist, title, cover, sUrl) {
+        if (prevSong != title) {
+            prevSong = title;
+            var css = document.createElement("style");
+            css.type = "text/css";
+            var main = document.getElementsByTagName('main')[0];
+            if (cover) {
+                css.innerHTML = "main:before {background-image:url("+cover+")}";
+            } else {
+                css.innerHTML = "main:before {background-image:url(/images/misc/music.png)}";
+            }
+            document.body.appendChild(css);
+            if (sUrl) $("#sUrl").attr("href", sUrl);
+            $("#artist").html(artist);
+            $("#song").html(title)
+        }
+    }, "samd3n");
+}, 2000);
+</script>

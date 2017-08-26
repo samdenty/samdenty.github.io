@@ -16,6 +16,9 @@
       <loc>http://localhost:69/search.html</loc>
     </url>
     <url>
+      <loc>http://localhost:69/spotify.html</loc>
+    </url>
+    <url>
       <loc>http://localhost:69/work.html</loc>
     </url>
   </urlset>
