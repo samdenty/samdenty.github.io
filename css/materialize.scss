@@ -4022,6 +4022,11 @@ small {
     font-size: 24px;
     font-weight: 300;
 }
+.card .card-title .chip {
+    vertical-align: bottom;
+    margin-bottom: 2px;
+    pointer-events: none;
+}
 .card .card-title.activator {
     cursor: pointer;
 }
