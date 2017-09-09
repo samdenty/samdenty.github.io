@@ -10,3 +10,6 @@ sass:
 
 # Set port
 port: 69
+
+# Enable local network access
+host: 0.0.0.0

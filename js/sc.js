@@ -88,9 +88,33 @@ var sc_project=11396698,
 	sc_text=2,
 	_statcounter = _statcounter || [];
 
+function getUnmaskedInfo(gl) {
+  var unMaskedInfo = {
+	renderer: '',
+	vendor: ''
+  };
+  var dbgRenderInfo = gl.getExtension("WEBGL_debug_renderer_info");
+  if (dbgRenderInfo != null) {
+	unMaskedInfo.renderer = gl.getParameter(dbgRenderInfo.UNMASKED_RENDERER_WEBGL);
+	unMaskedInfo.vendor = gl.getParameter(dbgRenderInfo.UNMASKED_VENDOR_WEBGL);
+  }
+
+  return unMaskedInfo;
+}
 
 var client = new ClientJS();
-_statcounter.push({"tags": {"fingerprint": client.getFingerprint(), "cpu": client.getCPU(), "engine-version": client.getEngine() + ":" + client.getEngineVersion(), "browser": client.getBrowser() + ":" + client.getBrowserVersion(), "useragent": client.getUserAgent(), "language": client.getLanguage()}});
+var sitever = document.getElementById("statcounter").getAttribute("site-build");
+canvas = document.createElement("canvas");
+canvas.style.display = "none";
+var gl = canvas.getContext("experimental-webgl");
+var gpu = getUnmaskedInfo(gl).renderer;
+
+
+_statcounter.push({"tags": {"fingerprint": client.getFingerprint(), "cpu": client.getCPU(), "engine-version": client.getEngine() + ":" + client.getEngineVersion(), "browser": client.getBrowser() + ":" + client.getBrowserVersion(), "useragent": client.getUserAgent(), "language": client.getLanguage(), "gpu": gpu, "site-version": sitever}});
+
+
+
+
 
 var sc_width = screen.width;
 var sc_height = screen.height;

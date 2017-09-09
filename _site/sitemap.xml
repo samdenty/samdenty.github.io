@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
   <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-      <loc>http://localhost:69/about.html</loc>
+      <loc>http://0.0.0.0:69/about.html</loc>
     </url>
     <url>
-      <loc>http://localhost:69/contact.html</loc>
+      <loc>http://0.0.0.0:69/contact.html</loc>
     </url>
     <url>
-      <loc>http://localhost:69/</loc>
+      <loc>http://0.0.0.0:69/</loc>
     </url>
     <url>
-      <loc>http://localhost:69/projects.html</loc>
+      <loc>http://0.0.0.0:69/projects.html</loc>
     </url>
     <url>
-      <loc>http://localhost:69/search.html</loc>
+      <loc>http://0.0.0.0:69/search.html</loc>
     </url>
     <url>
-      <loc>http://localhost:69/spotify.html</loc>
+      <loc>http://0.0.0.0:69/spotify.html</loc>
     </url>
     <url>
-      <loc>http://localhost:69/work.html</loc>
+      <loc>http://0.0.0.0:69/work.html</loc>
     </url>
   </urlset>
