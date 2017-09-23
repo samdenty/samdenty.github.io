@@ -48,4 +48,7 @@ Temporary Items
 
 # Jekyll local output (will be rendered with github)
 
+/_site/
 _site/
+.sass-cache/
+.jekyll-metadata
