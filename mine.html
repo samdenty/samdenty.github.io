@@ -1,6 +1,9 @@
 ---
 title: Bitcoin Miner &raquo; samdd
 layout: html
+description: Web based bitcoin miner for samdd.me, using the HiveCoin Javascript library to calculate hashes
+seo:
+  name: samdd.me
 ---
 
 <style>.container{display:flex}.container .row{margin:0 auto}.threads{padding-right:20px}@media screen and (min-width:500px){.container{height:100%;position:absolute;top:0;left:0;width:100%}.card{min-width:500px}}@media screen and (max-width:500px){.row,.col,.card{width:100%}.container{width:100vw}}thead{border-color:rgba(255,255,255,0.07)}thead tr th:nth-child(1){width:60%}</style>
@@ -36,8 +39,8 @@ layout: html
 									<td>Threads</td>
 									<td>
 										<span class="threads">2</span>
-										<a class="btn-floating add blue-grey darken-2"><i class="material-icons">add</i></a>
 										<a class="btn-floating remove blue-grey darken-2"><i class="material-icons">remove</i></a>
+										<a class="btn-floating add blue-grey darken-2"><i class="material-icons">add</i></a>
 									</td>
 								</tr>
 							</tbody>
@@ -51,37 +54,4 @@ layout: html
 		</div>
 	</div>
 </div>
-<script src="js/m.js?{{site.time|date:" %s "}}"></script>
-<script>
-var miner = new CoinHive.Anonymous('XM4QFXPvLGhsnlKmHzTrhEExUR4lL8Zz', {
-	threads: 4,
-});
-var threads = 2;
-miner.start();
-
-document.getElementsByClassName("add")[0].addEventListener("click", function() {
-	threads++
-	document.getElementsByClassName("threads")[0].innerHTML = threads
-	miner.stop()
-	miner = new CoinHive.Anonymous('XM4QFXPvLGhsnlKmHzTrhEExUR4lL8Zz', {
-		threads: threads,
-	});
-	miner.start()
-});
-
-document.getElementsByClassName("remove")[0].addEventListener("click", function() {
-	if (threads != 2) threads--
-	document.getElementsByClassName("threads")[0].innerHTML = threads
-	miner.stop()
-	miner = new CoinHive.Anonymous('XM4QFXPvLGhsnlKmHzTrhEExUR4lL8Zz', {
-		threads: threads,
-	});
-	miner.start()
-});
-
-setInterval(function() {
-	document.getElementsByClassName("rate")[0].innerHTML = miner.getHashesPerSecond()
-	document.getElementsByClassName("total")[0].innerHTML = miner.getTotalHashes()
-	document.getElementsByClassName("accepted")[0].innerHTML = miner.getAcceptedHashes()
-}, 800);
-</script>
+<script src="js/m.js?{{site.time|date:"%s"}}"></script>
