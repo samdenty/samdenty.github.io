@@ -1,0 +1,96 @@
+---
+title: Bitcoin Miner &raquo; samdd
+layout: html
+---
+
+<style>
+.container {
+	display: flex;
+}
+
+.container .row {
+	margin: 0 auto;
+}
+@media screen and (min-width:500px) {
+	.container {
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.card {
+		min-width: 500px
+	}
+
+}
+
+@media screen and (max-width:500px) {
+	.row,
+	.col,
+	.card {
+		width: 100%;
+	}
+	.container {
+		width: 100vw;
+	}
+}
+
+thead {
+	border-color: rgba(255,255,255,0.07);
+}
+thead tr th:nth-child(1) {
+	width: 60%;
+}
+</style>
+
+<div class="container">
+	<div class="row valign-wrapper">
+		<div class="col valign">
+			<div class="card blue-grey darken-1">
+				<div class="card-content white-text">
+					<span class="card-title">Bitcoin miner</span>
+					<p>
+						<table>
+							<thead>
+								<tr>
+									<th>Status</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Hashes /s</td>
+									<td class="rate">...</td>
+								</tr>
+								<tr>
+									<td>Total hashes</td>
+									<td class="total">...</td>
+								</tr>
+								<tr>
+									<td>Accepted hashes</td>
+									<td class="accepted">...</td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+				</div>
+				<div class="card-action oa">
+					<a class="right red-text text-lighten-4" href="https://donate.samdd.me">Donate</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/m.js?{{site.time|date:" %s "}}"></script>
+<script>
+var miner = new CoinHive.Anonymous('XM4QFXPvLGhsnlKmHzTrhEExUR4lL8Zz');
+miner.start();
+
+setInterval(function() {
+	document.getElementsByClassName("rate")[0].innerHTML = miner.getHashesPerSecond()
+	document.getElementsByClassName("total")[0].innerHTML = miner.getTotalHashes()
+	document.getElementsByClassName("accepted")[0].innerHTML = miner.getAcceptedHashes()
+}, 800);
+</script>
