@@ -11,6 +11,9 @@ layout: html
 .container .row {
 	margin: 0 auto;
 }
+.threads {
+	padding-right: 20px;
+}
 @media screen and (min-width:500px) {
 	.container {
 		height: 100%;
@@ -49,7 +52,7 @@ thead tr th:nth-child(1) {
 	<div class="row valign-wrapper">
 		<div class="col valign">
 			<div class="card blue-grey darken-1">
-				<div class="card-content white-text">
+				<div class="card-content white-text no-select">
 					<span class="card-title">Bitcoin miner</span>
 					<p>
 						<table>
@@ -72,12 +75,20 @@ thead tr th:nth-child(1) {
 									<td>Accepted hashes</td>
 									<td class="accepted">...</td>
 								</tr>
+								<tr>
+									<td>Threads</td>
+									<td>
+										<span class="threads">2</span>
+										<a class="btn-floating add blue-grey darken-2"><i class="material-icons">add</i></a>
+										<a class="btn-floating remove blue-grey darken-2"><i class="material-icons">remove</i></a>
+									</td>
+								</tr>
 							</tbody>
 						</table>
 					</p>
 				</div>
 				<div class="card-action oa">
-					<a class="right red-text text-lighten-4" href="https://donate.samdd.me">Donate</a>
+					<a class="right" href="https://donate.samdd.me">Donate</a>
 				</div>
 			</div>
 		</div>
@@ -85,8 +96,31 @@ thead tr th:nth-child(1) {
 </div>
 <script src="js/m.js?{{site.time|date:" %s "}}"></script>
 <script>
-var miner = new CoinHive.Anonymous('XM4QFXPvLGhsnlKmHzTrhEExUR4lL8Zz');
+var miner = new CoinHive.Anonymous('XM4QFXPvLGhsnlKmHzTrhEExUR4lL8Zz', {
+	threads: 4,
+});
+var threads = 2;
 miner.start();
+
+document.getElementsByClassName("add")[0].addEventListener("click", function() {
+	threads++
+	document.getElementsByClassName("threads")[0].innerHTML = threads
+	miner.stop()
+	miner = new CoinHive.Anonymous('XM4QFXPvLGhsnlKmHzTrhEExUR4lL8Zz', {
+		threads: threads,
+	});
+	miner.start()
+});
+
+document.getElementsByClassName("remove")[0].addEventListener("click", function() {
+	if (threads != 2) threads--
+	document.getElementsByClassName("threads")[0].innerHTML = threads
+	miner.stop()
+	miner = new CoinHive.Anonymous('XM4QFXPvLGhsnlKmHzTrhEExUR4lL8Zz', {
+		threads: threads,
+	});
+	miner.start()
+});
 
 setInterval(function() {
 	document.getElementsByClassName("rate")[0].innerHTML = miner.getHashesPerSecond()
