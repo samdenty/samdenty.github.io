@@ -1,6 +1,9 @@
 # Exclude some folders & files
 exclude: [_*, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
 
+url: https://samdd.me
+logo: https://samdd.me/host/samdd.png
+
 # Gem plugins
 plugins: [jekyll-tidy, jekyll-sitemap, jekyll-seo-tag]
 
