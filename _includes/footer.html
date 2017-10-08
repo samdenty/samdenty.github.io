@@ -3,8 +3,8 @@
 		<div class="row">
 			<div class="col l6 s12">
 				<h5 class="white-text">About Me</h5>
-				<p class="grey-text text-lighten-2">
-					Age: 14<br>Location: United Kingdom
+				<p class="grey-text text-lighten-2">{% assign birthday = '21-11-2002 00:00:00' | date: '%s' %}{% assign myAge = site.time | date: '%s' | minus: birthday | divided_by: 31536000 %}
+					Age: {{myAge}}<br>Location: United Kingdom
 				</p>
 				<p class="grey-text text-lighten-4">I am a freelancer specializing in a variety of different programming languages and platforms. </p>
 				<button data-target="contact" class="waves-effect waves-red btn red lighten-2">Contact</button>&nbsp;&nbsp;<a class="waves-effect waves-red btn-flat red-text text-lighten-3" href="about">More info</a>
@@ -35,24 +35,24 @@
 </footer>
 
 <div id="contact" class="modal">
-	<form method="get" action="https://maker.ifttt.com/trigger/contact/with/key/_fkapjdJAPj6aKKtULQ0s/" target="contactFrame">
+	<form method="post" action="https://s.samdd.me/mail/" target="contactFrame">
 		<div class="modal-content">
 			<h4>Contact</h4>
 			<p>Want to make an inquiry? email me at <a href="mailto:business@samdd.me" class="teal-text" target="blank_">business@samdd.me</a></p>
 			<div class="row">
 				<div class="row">
 					<div class="input-field col s6">
-						<input id="name" type="text" name="value1" required>
+						<input id="name" type="text" name="name" required>
 						<label for="name">Name</label>
 					</div>
 					<div class="input-field col s6">
-						<input id="email" type="email" class="validate" name="value2" required>
+						<input id="email" type="email" class="validate" name="email" required>
 						<label for="email">Email</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
-						<textarea id="message" class="materialize-textarea" name="value3" required>Hey there,</textarea>
+						<textarea id="message" class="materialize-textarea" name="message" required>Hey there,</textarea>
 						<label for="message">Message</label>
 					</div>
 				</div>
@@ -85,4 +85,4 @@
 {% if page.js %}<script src="{{page.js}}?{{site.time|date:"%s"}}"></script>{% endif %}
 {% if page.js2 %}<script src="{{page.js2}}?{{site.time|date:"%s"}}"></script>{% endif %}
 {% if page.append %}{{page.append}}{% endif %}
-<script src="https://beta.widgetbot.io/crate.js?{{site.time|date:"%s"}}" server="335836376031428618|358008655364489228" options="0002" color="#DE5D5D" intercom beta delay defer></script>
+{% include crate.html %}
