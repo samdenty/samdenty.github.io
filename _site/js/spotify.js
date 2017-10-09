@@ -2,7 +2,7 @@
  *  -----------------------------------
  *  spotifyCurrentlyPlaying.js - v0.3.2
  *  -----------------------------------
- *
+ */
 
 function getSong(callback, name) {
 	var lastfm_tracks = [];
