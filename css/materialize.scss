@@ -1672,21 +1672,23 @@ body {
     transition: box-shadow .1s linear, transform 0.5s ease, margin 0.1s linear;
     overflow: hidden;
 }
-body.tight .main-wrap {
-    transform: translateY(-120px) scale(0.8);
-    cursor: pointer;
-    box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
-}
-body.tight nav {
-    transform: translateY(-83px) scale(0.8);
-    cursor: pointer;
-}
-body.tight .side-nav {
-    display: none;
-}
-body.tight .content {
-    pointer-events: none;
+@media only screen and (min-width:992px) {
+    body.tight .main-wrap {
+        transform: translateY(-120px) scale(0.8);
+        cursor: pointer;
+        box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+    }
+    body.tight nav {
+        transform: translateY(-83px) scale(0.8);
+        cursor: pointer;
+    }
+    body.tight .side-nav {
+        display: none;
+    }
+    body.tight .content {
+        pointer-events: none;
+    }
 }
 
 /* HTML5 display definitions
