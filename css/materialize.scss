@@ -7870,7 +7870,8 @@ spacer {
     line-height: 39px;
 }
 .ts {
-    text-shadow: 1px 1px 9px #000
+    box-shadow: inset 0px -90px 80px -50px rgba(27, 28, 29, 0.87);
+    width: 100%;
 }
 #cover {
     display:block;
