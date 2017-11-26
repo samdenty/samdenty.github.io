@@ -1,5 +1,4 @@
 Sitemap: https://samdd.me/sitemap.xml
  
 User-agent: *
-Disallow: /Windows-10-SVM
 Disallow: /assets
