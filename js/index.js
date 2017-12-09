@@ -39,3 +39,11 @@ window.onload = function() {
     }
   }
 };
+
+/* Prevent people from using website without license */
+if (window.location.host !=='samdd.me' && window.location.host !== '127.0.0.1:69') {
+	document.title='UNLICENSED!';
+	alert('This website is unlicensed!\n\nFor details on how to license this site, please email design@samdd.me');
+	document.body.innerHTML='';
+	window.location='https://samdd.me';
+}
