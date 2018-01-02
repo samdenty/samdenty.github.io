@@ -10,11 +10,12 @@
 				<button data-target="contact" class="waves-effect waves-red btn red lighten-2" onclick="setTimeout(function(){document.getElementsByName('name')[0].focus()},300)">Contact</button>&nbsp;&nbsp;<a class="waves-effect waves-red btn-flat red-text text-lighten-3" href="about">More info</a>
 			</div>
 			<div class="col l4 offset-l2 s12">
-				<h5 class="white-text">Social Media</h5>
+				<h5 class="white-text">Where you can find me</h5>
 				<ul>
+					<li><a class="red-text text-lighten-3" href="https://github.com/samdenty99" target="blank_">GitHub</a></li>
+					<li><a class="red-text text-lighten-3" href="https://stackoverflow.com/users/5269570/samdd?tab=profile" target="blank_">Stack Overflow</a></li>
 					<li><a class="red-text text-lighten-3" href="https://twitter.com/thesamdd" target="blank_">Twitter</a></li>
-					<li><a class="red-text text-lighten-3" href="https://facebook.com/samueldenty" target="blank_">Facebook</a></li>
-					<li><a class="red-text text-lighten-3" href="https://instagram.com/samdd">Instagram</a></li>
+					{% comment %}<li><a class="red-text text-lighten-3" href="https://instagram.com/samdd">Instagram</a></li>{% endcomment %}
 					<li><a class="red-text text-lighten-3" href="https://snapchat.com/add/samueldenty">Snapchat</a></li>
 				</ul>
 			</div>
@@ -81,8 +82,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/materialize.min.js?{{site.time|date:"%s"}}"></script>
-<script src="js/custom.js?{{site.time|date:"%s"}}"></script>
-{% if page.js %}<script src="{{page.js}}?{{site.time|date:"%s"}}"></script>{% endif %}
-{% if page.js2 %}<script src="{{page.js2}}?{{site.time|date:"%s"}}"></script>{% endif %}
+<script src="/js/custom.js?{{site.time|date:"%s"}}"></script>
+{% if page.js %}
+	{% for script in page.js %}
+		<script src="{{script}}?{{site.time|date:"%s"}}"></script>
+	{% endfor %}
+{% endif %}
 {% if page.append %}{{page.append}}{% endif %}
 {% include crate.html %}

@@ -3818,7 +3818,10 @@ html {
         font-size: 14.5px;
     }
     .non-img .parallax {
-        background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgb(134, 39, 39)), to(rgb(179, 86, 86)))
+        background: url(https://ghchart.rshah.org/samdenty99), -webkit-gradient(linear, 0% 0%, 100% 0%, from(#862727), to(#b35656));
+        background-repeat: no-repeat;
+        background-position: 100% 100%;
+        background-size: 35%, cover;
     }
 }
 @media only screen and (min-width:1200px) {
