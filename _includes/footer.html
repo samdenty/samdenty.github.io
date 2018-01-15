@@ -4,7 +4,7 @@
 			<div class="col l6 s12">
 				<h5 class="white-text">About Me</h5>
 				<p class="grey-text text-lighten-2">{% assign birthday = '21-11-2002 00:00:00' | date: '%s' %}{% assign myAge = site.time | date: '%s' | minus: birthday | divided_by: 31536000 %}
-					Age: {{myAge}}<br>Location: United Kingdom
+					Age: {{myAge}}<br>Location: Ireland
 				</p>
 				<p class="grey-text text-lighten-4">I am a freelancer specializing in a variety of different programming languages and platforms. </p>
 				<button data-target="contact" class="waves-effect waves-red btn red lighten-2" onclick="setTimeout(function(){document.getElementsByName('name')[0].focus()},300)">Contact</button>&nbsp;&nbsp;<a class="waves-effect waves-red btn-flat red-text text-lighten-3" href="about">More info</a>
