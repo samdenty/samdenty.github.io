@@ -25,13 +25,6 @@
 		<div class="container">
 			&copy;&nbsp;<span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span>&nbsp;<b>Samuel Denty</b>
 		</div>
-		<a class="btn-flat white-text waves-effect waves-red" href="https://statcounter.com/p11396698/summary/?guest=1" style="min-width: fit-content;">
-			<i class="material-icons left">trending_up</i>
-			<script src="/js/sc.js?{{site.time|date:"%s"}}" site-build="{{site.time|date:"%s"}}" id="statcounter"></script>
-			<noscript>
-				<img class="statcounter" src="https://c.statcounter.com/11396698/0/8dbb12c1/0/">
-			</noscript>
-		</a>&nbsp;&nbsp;&nbsp;
 	</div>
 </footer>
 
@@ -82,7 +75,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="js/materialize.min.js?{{site.time|date:"%s"}}"></script>
-<script src="/js/custom.js?{{site.time|date:"%s"}}"></script>
+<script src="/js/custom.js?{{site.time|date:"%s"}}" async></script>
+<script src="/js/sc.js?{{site.time|date:"%s"}}" async></script>
 {% if page.js %}
 	{% for script in page.js %}
 		<script src="{{script}}?{{site.time|date:"%s"}}"></script>
