@@ -1,18 +1,8 @@
-{% comment %}<script src="https://crate.widgetbot.io/js" server="335836376031428618|339847151288975372" options="0002" color="#495256" beta defer quiet discord></script>{% endcomment %}
-<script src="https://crate.widgetbot.io/v2" defer async>
-  new Crate({
+<script src="https://unpkg.com/@widgetbot/crate" defer async>
+  var crate = new Crate({
     server: '335836376031428618',
-    channel: '335839575119233024',
-    url: 'https://widgetbot.io/channels/335836376031428618/335839575119233024',
-    analytics: false,
-    logo: 'discord',
-    colors: {
-      toggle: '#555d61'
-    },
-    notifications: {
-      toasts: {
-        visibilityTime: 0
-      }
-    }
+    channel: '339847151288975372',
+    color: '#555d61'
   })
+  crate.notify({ content: 'Hey there! :wave: Click here to leave a message!', timeout: 0 })
 </script>
